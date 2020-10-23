@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+a.menu-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.menu-link i {
+  transition: 0.3s linear;
+}
+
+.menu-link i:hover {
+  transform: scale(1.15);
+}
+
+li {
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  color: #faf6f6;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.bar {
+  margin: 0.2em;
+  font-size: 1.8rem;
+  color: #fafbfc;
+}
+
+nav[role="navigation"] {
+  clear: both;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.js nav[role="navigation"] {
+  overflow: hidden;
+  max-height: 0;
+}
+
+nav[role="navigation"].active {
+  max-height: 15rem;
+}
+
+nav[role="navigation"] ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav[role="navigation"] li a {
+  display: block;
+  padding: 0.8em;
+  border-radius: 5px;
+  transition: all 0.4s linear;
+}
+
+nav[role="navigation"] li a:hover {
+  background: rgba(179, 179, 187, 0.5);
+}
+
+@media screen and (min-width: 48em) {
+  a.menu-link {
+    display: none;
+  }
+  .js nav[role="navigation"] {
+    max-height: none;
+  }
+  nav[role="navigation"] ul {
+    border: 0;
+    margin-top: 0.5rem;
+  }
+
+  nav[role="navigation"] li {
+    display: inline-block;
+    margin: 0 0.25em;
+  }
+  nav[role="navigation"] li a {
+    border: 0;
+  }
+}
+
+@media screen and (min-width: 64em) {
+}
